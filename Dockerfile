@@ -28,7 +28,7 @@ RUN wget --no-cookies --no-check-certificate "https://github.com/Icinga/icingawe
 RUN unzip /tmp/icingaweb2.zip "icingaweb2-master/modules/doc/*" "icingaweb2-master/modules/monitoring/*" -d "/tmp/icingaweb2"
 RUN cp -R /tmp/icingaweb2/icingaweb2-master/modules/monitoring /etc/icingaweb2/modules/
 RUN cp -R  /tmp/icingaweb2/icingaweb2-master/modules/doc /etc/icingaweb2/modules/
-RUN wget --no-cookies --no-check-cetificate "https://github.com/Icinga/icingaweb2-module-pnp4nagios/archive/master.zip" -O /tmp/module1.zip
+RUN wget "https://github.com/Icinga/icingaweb2-module-pnp4nagios/archive/master.zip" -O /tmp/module1.zip
 RUN unzip /tmp/module1.zip "icingaweb2-module-pnp4nagios-master/*" -d "/tmp/pnp4nagios"
 RUN cp -R /tmp/pnp4nagios/icingaweb2-module-pnp4nagios-master /etc/icingaweb2/modules/
 RUN rm -rf /tmp/icingaweb2.zip /tmp/icingaweb2 /tmp/module1.zip
